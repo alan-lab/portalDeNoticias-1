@@ -2,5 +2,11 @@
 `npm install -g @angular/cli`
 ## criar o projeto do site
 `npx ng new portal`
+## Entrar na pasta do projeto
+`cd portal`
+## Inicializar o servidor angular (modo dev)
+npx ng serve
+## Criar um novo componente
+npx ng g c header
 
 
