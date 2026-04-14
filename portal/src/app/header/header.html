@@ -1,11 +1,91 @@
-<header class="bg-blue-900 text-white shadow-lg">
-    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold tracking-tight">Portal de notícias</h1>
-        <ul class="flex space-x-6 font-medium">
-            <li class="hover:text-gray-400"><a routerLink="local">Locais</a></li>
-            <li class="hover:text-gray-400"><a routerLink="regional">Regionais</a></li>
-            <li class="hover:text-gray-400"><a routerLink="internacional">Internacionais</a></li>
-       
-        </ul>
-    </nav>
+<header class="bg-slate-900/95 backdrop-blur-md text-white shadow-2xl sticky top-0 z-50 border-b border-white/5">
+
+  <nav class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-br` from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/30 hover:rotate-6 hover:scale-110 transition-transform duration-300">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="4"  width="18" height="3"   rx="1.5" fill="white"/>
+          <rect x="3" y="10" width="11" height="2.5" rx="1.25" fill="white" opacity="0.7"/>
+          <rect x="3" y="16" width="14" height="2.5" rx="1.25" fill="white" opacity="0.5"/>
+        </svg>
+      </div>
+      <div>
+        <a routerLink="/" class="text-xl font-extrabold tracking-tight bg-gradient-to-r` from-blue-400 to-indigo-300 bg-clip-text text-transparent hover:opacity-80 transition-opacity leading-none block">
+          PORTAL DE NOTÍCIAS
+        </a>
+        <span class="text-[10px] text-white/30 tracking-[0.15em] uppercase font-medium">Brasil em tempo real</span>
+      </div>
+    </div>
+
+    <!-- Links -->
+    <ul class="flex flex-wrap justify-center items-center gap-1 text-sm uppercase tracking-widest font-semibold">
+
+      <li>
+        <a routerLink="local" routerLinkActive="text-white bg-white/10"
+           class="flex items-center gap-2 px-4 py-2 rounded-lg text-white/55 hover:text-white hover:bg-white/8 transition-all duration-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-blue-500 hidden group-[.active]:block"></span>
+          Locais
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="regional" routerLinkActive="text-white bg-white/10"
+           class="flex items-center gap-2 px-4 py-2 rounded-lg text-white/55 hover:text-white hover:bg-white/8 transition-all duration-200">
+          Regionais
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="internacional" routerLinkActive="text-white bg-white/10"
+           class="flex items-center gap-2 px-4 py-2 rounded-lg text-white/55 hover:text-white hover:bg-white/8 transition-all duration-200">
+          Internacionais
+        </a>
+      </li>
+
+      <!-- Separador -->
+      <li class="w-px h-5 bg-white/10 mx-1"></li>
+
+      <li>
+        <a routerLink="quem-somos"
+           class="px-5 py-2 rounded-lg bg-gradient-to-r` from-blue-600 to-indigo-600 text-white font-semibold shadow-lg shadow-blue-500/25 hover:shadow-blue-500/45 hover:-translate-y-0.5 transition-all duration-200">
+          Quem somos
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- Busca -->
+    <button class="w-9 h-9 rounded-lg bg-white/5 border border-white/8 hidden` items-center justify-center text-white/50 hover:bg-white/10 hover:text-white transition-all duration-200 hidden md:flex">
+      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="7"/>
+        <path d="m21 21-4.35-4.35"/>
+      </svg>
+    </button>
+
+  </nav>
+
+  <!-- Ticker ao vivo -->
+  <div class="bg-blue-600/10 border-t border-blue-500/15 px-6 py-1.5 flex items-center gap-3 overflow-hidden">
+    <span class="text-[10px] font-bold tracking-widest uppercase text-blue-400 bg-blue-500/15 px-2 py-0.5 rounded shrink-0">
+      Ao vivo
+    </span>
+    <div class="overflow-hidden flex-1" style="mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent)">
+      <div class="flex gap-10 whitespace-nowrap animate-ticker">
+        <span class="ticker-item">Eleições municipais: candidatos iniciam campanha nas capitais</span>
+        <span class="ticker-item">Chuvas intensas afetam sul do país — alerta emitido para 5 estados</span>
+        <span class="ticker-item">Bolsa fecha em alta de 1,4% impulsionada pelo setor de energia</span>
+        <span class="ticker-item">Governo anuncia novo pacote de infraestrutura para o Nordeste</span>
+        <span class="ticker-item">Copa do Mundo: seleção brasileira confirma amistoso para julho</span>
+        <!-- duplicado para loop contínuo -->
+        <span class="ticker-item">Eleições municipais: candidatos iniciam campanha nas capitais</span>
+        <span class="ticker-item">Chuvas intensas afetam sul do país — alerta emitido para 5 estados</span>
+        <span class="ticker-item">Bolsa fecha em alta de 1,4% impulsionada pelo setor de energia</span>
+        <span class="ticker-item">Governo anuncia novo pacote de infraestrutura para o Nordeste</span>
+        <span class="ticker-item">Copa do Mundo: seleção brasileira confirma amistoso para julho</span>
+      </div>
+    </div>
+  </div>
+
 </header>
